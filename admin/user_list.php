@@ -5,7 +5,7 @@
 
   if(empty($_SESSION['user_id'] ) || empty($_SESSION['logged_in']))
   {
-    header("Location:login.php");
+    header("Location:index.php");
   }
 ?>
   <!-- Header call header.php-->
@@ -71,11 +71,11 @@
                         <a href="user_edit.php?id=<?php echo $value['id'] ?>" class="btn btn-warning">Edit</a>
                         <a href="user_delete.php?id=<?php echo $value['id'] ?>"
                            onclick = "return confirm(' As you sure want to delete')";
-                           class="btn btn-danger">Delete</a>
+                           class="btn btn-outline-danger">Delete</a>
                       </td>
                     </tr>
 
-              <?php  $i++;
+                    <?php  $i++;
                   }
                 }
               ?>
